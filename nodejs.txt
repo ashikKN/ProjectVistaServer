@@ -1,0 +1,93 @@
+
+
+    ------NODE JS---------
+
+  1. JS Runtime Environment with JS Library
+  2. Features of Node JS
+        - Extremely faster - using same enginee as in browser
+        - Asynchronous Programming - 
+        - Single threaded with event loop
+        - Highly Scalable
+        - Open Source 
+   3. Node js global Objects
+        - can be access anywhere from node js app without exporting / importing
+        - ex : console.log() ,setTimeOut(),...
+   4. Node js Module System
+        - Each file in node js app is considered as seperate module.to reuse modules we have to export and import 
+        - To import a module : use require('module name) method
+        - To export a module : use module.exports / exports
+        - Built in Modules 
+            - fs :To handle the file system
+            - http:generating http requests
+            - https :generating https requests
+            - events :To handle events
+            - crypto :tool like encryption,hashing etc 
+            - process :used to provide currently running process information
+                      - environmental variable : used to store run time values
+   5. Packages :
+            - packages typically refer to modules or libraries that you can use to extend the functionality of      your applications.
+            - collection of node_modules and package.json
+            - install package : npm install package-name
+            - create package.json -npm configuration file for project
+            - node_modules folder - used to hold copies of installed packages
+            - package-lock.json - to hold versions of installed packages
+   7. Backend Concepts 
+            -can be used in
+            - Client-server architecture : sending request and response between 2 applications
+              - Api : is a set of rules and protocols that allows different software applications to communicate with each other
+              - RESTful API : is an architectural style for designing 
+              networked applications.
+                      RESTful APIs use standard HTTP methods (GET, POST, PUT, DELETE) to perform operations on resources.
+                      Resources are identified by URIs (Uniform Resource Identifiers), and data is often exchanged in JSON format.
+              - CRUD : create,read,update,DELETE
+              - CORS :Cross Origin Resource Sharing
+                     It's a security feature in web browsers to make sure that a web page can only request data from the same domain it came from.
+          
+   
+      Express JS
+ --------------------
+
+- Express.js is a web framework for Node.js that simplifies the process of building web applications and APIs.
+- It provides a set of tools and conventions to make it easier to handle routes, requests, responses, and more
+
+ 1- Create a server folder
+ 2- create package.json file : use command ' npm init -y '
+ 3- update start command as "start" : "node index.js" in script of package.json
+ 4- Install Packages
+    - Express : npm install Express
+    - cors : npm i cors
+    - dotenv : npm i dotenv
+5- create .env file to hold environmental variables
+6-create .gitignore to add files to ignore while adding to git
+7-create index.js file to define server
+        -import dotenv
+        -import Express
+        -import cors
+        -create express server
+        -use following in server
+           - cors
+           - parser for json
+        -customize port to listen to http request
+        -run server app
+8. Create Routes folder in server to define routes
+        -create router.js file
+          -import express
+          -create router object of expresss to define path
+          -using router object create path
+          -to define logic to resolve http request ,redirect it to its controller
+9. Create Controller folder in server to define logic to resolve API
+        -Create userController.js file
+           create function to solve request
+
+-----Mongoose----
+
+1.Node js library to communicate with mongodb 
+2.install mongoose - npm install mongoose
+3.create a new folder for definining database connection using mongoose
+      create a js file to define connection
+          - import mongoose
+          - get connection string from process.env
+          - connect mongodb with node using mongoose
+          - import connection js file in index.js file
+4.Schema - maps mongodb collection and defines the shape of the document.
+5.Model 

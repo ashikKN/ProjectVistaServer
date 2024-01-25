@@ -1,0 +1,33 @@
+---------MONGO DB--------
+ - MongoDB is a document database. It stores data in a type of JSON format called BSON.
+
+Mongosh : commands
+------------------
+-show databases : show all databases
+-use database_name : redirect to a specific database
+-show collection : show all collection inside database
+-find(): show all documents in a collection
+-find(condition): to get all documents which satisfy the condition from a collection
+-findOne(condition): get only single document which satisfy the condition else return null
+-limit(count): to limit document while reading from DB
+-sort(key:1 or -1) : sort ascending order if 1 , descending if -1 
+-countDocuments() :total number of documents inside a collection
+-insertOne() :insert single document to collection
+-insertMany(array of documents) : insert more documents at the same time 
+-updateOne()
+-updateMany()
+-deleteOne()
+-deleteMany()
+
+--Querying Commands--
+
+- $gt / $gte / $lt / $lte  
+- $and / $or
+- $eq / $ne 
+- $in / $nin
+- $exists
+- $inc -increment
+- $set -update 
+
+Aggregation : process multiple documents 
+ $lookup
